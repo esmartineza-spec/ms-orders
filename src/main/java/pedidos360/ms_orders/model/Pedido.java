@@ -15,9 +15,12 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String cliente;
+    private String clienteId;
 
-    private String producto;
+    private Long productoId;
 
     private Integer cantidad;
+
+    @Enumerated(EnumType.STRING)
+    private EstadoPedido estado;
 }
